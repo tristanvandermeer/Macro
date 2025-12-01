@@ -1,6 +1,3 @@
-import pynput, time
-
-# record_mouse.py
 from pynput import mouse
 import time
 import json
@@ -25,8 +22,8 @@ def on_click(x, y, button, pressed):
         "t": now(),
         "x": x,
         "y": y,
-        "button": str(button),   # e.g. 'Button.left'
-        "pressed": pressed,      # True on press, False on release
+        "button": str(button),
+        "pressed": pressed,
     })
 
 def on_scroll(x, y, dx, dy):
@@ -58,7 +55,6 @@ def main():
         print("\nStopping...")
         listener.stop()
 
-    # Save to file
     filename = "mouse_recording.json"
     with open(filename, "w") as f:
         json.dump(events, f, indent=2)

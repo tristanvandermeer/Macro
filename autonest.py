@@ -7,8 +7,8 @@ import math
 import pyautogui  # For screen size
 
 # --------- CONFIGURATION ---------
-# old BOUNDING_BOX = (575, 550, 1150, 950)
-BOUNDING_BOX = (900, 550, 1650, 1150)
+BOUNDING_BOX = (575, 550, 1150, 950) # one screen bounding
+# old BOUNDING_BOX = (900, 550, 1650, 1150)
 TARGET_WORD = "malworship"
 CLICK_OFFSET_Y = 40
 MOVE_DURATION = 1.0

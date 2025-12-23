@@ -1,4 +1,3 @@
-# record_input.py
 from pynput import mouse, keyboard
 import time
 import json
@@ -8,7 +7,7 @@ events = []
 start_time = None
 stop_flag = threading.Event()
 
-# Mouse thinning
+# Files get too big, arbitrary choice for lower recording resolution.
 MOVE_SKIP_EVERY = 2      # record every 2nd movement event
 MOVE_MIN_DT = 0.005      # min seconds between recorded moves
 _move_count = 0
@@ -57,7 +56,7 @@ def on_scroll(x, y, dx, dy):
     })
 
 def on_key_press(key):
-    # Esc to stop recording
+    # press Esc to stop recording
     if key == keyboard.Key.esc:
         stop_flag.set()
         return False 

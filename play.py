@@ -1,4 +1,3 @@
-# replay_input.py
 from pynput import mouse, keyboard
 import time
 import json
